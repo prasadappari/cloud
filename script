@@ -1,0 +1,37 @@
+#!/bin/bash
+
+echo "select an option:"
+echo "1.Display the content of a file"
+echo "2.List files and directories"
+echo "3.search for a string in a file"
+
+read -p "Enter your choice(1,2, or 3):"choice case $choice in
+1)
+read -p "Enter the filename:"filename
+if[[-f $filename]]; then
+ cat"$filename
+else
+ echo"File not found!"
+fi
+;;
+2)
+read -p "Enter the directory:"directory
+if[[-d $directory]]; then
+ ls -la"$directory
+else
+ echo"Directory not found!"
+fi
+;;
+3)
+read -p "Enter the string to search:"searchstring
+read -p "Enter the filename:"filename
+if[[-f $filename]]; then
+ grep -o "$searchstring""$filename"|wc-I
+else
+ echo"File not found!"
+fi
+;;
+*)
+echo "Invalid option selected!"
+;;
+esac

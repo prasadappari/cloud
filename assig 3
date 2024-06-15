@@ -1,0 +1,9 @@
+#!/bin/bash
+
+coun_lines(){
+  file="$1"
+  lines=$(wc -l<"$file")
+  echo"Number of lines in $file: $lines"
+  }
+  count_lines "file1.txt"
+  count_lines "file2.txt"

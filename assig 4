@@ -1,0 +1,7 @@
+#!/bin/bash
+mkdir -p TestDir
+for((i=1;i<=10;i++)); do
+file_name="File${i}.txt"
+echo "$file_name" > TestDir/"$file_name"
+done
+echo"Files created successfully."

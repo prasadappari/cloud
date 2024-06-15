@@ -1,0 +1,15 @@
+#!/bin/bash
+
+
+for file in T*; do
+
+if [ -f "$file" ]; then
+
+chomd g+rwx "$file"
+
+echo "Changed group permissions for $file to RWX"
+
+fi
+
+done
+
